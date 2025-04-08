@@ -1,0 +1,556 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ecf0f1;
+    color: #34495e;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background: #0400ff;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* Style de base du menu */
+nav {
+    background-color: #000000; /* Fond bleu foncé */
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #2c4f66; /* Bleu clair lors du survol */
+    color: #fff;
+    transform: scale(1.1); /* Légère augmentation de taille au survol */
+}
+
+nav ul li a:active {
+    transform: scale(1); /* Pas de transformation lors du clic */
+}
+
+/* Effet de survol pour le menu */
+nav ul li a:hover {
+    background-color: #0400ff; /* Vert lors du survol */
+    color: white;
+    text-shadow: 1px 1px 2px #000;
+}
+
+/* Style du menu pour les écrans plus larges */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Affichage vertical sur petits écrans */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+
+/* Sections */
+/* Section À propos de moi */
+#A\ propos {
+    background-color: #fdfdfd;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+#A\ propos h3 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+#A\ propos p {
+    font-size: 16px;
+    color: #566573;
+    margin-bottom: 40px;
+}
+
+/* Section Projet Professionnel */
+#Projet\ Professionnel {
+    background-color: #f9fbfd;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+#Projet\ Professionnel h3 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+#Projet\ Professionnel p {
+    font-size: 16px;
+    color: #566573;
+    margin-bottom: 40px;
+}
+
+/* Section du lien CV */
+.cv-link {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.cv-button {
+    display: inline-block;
+    background: linear-gradient(45deg, #0400ff, #000000);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cv-button:hover {
+    background: linear-gradient(45deg, #0400ff, #000000);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.cv-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cv-button:before {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+
+
+/* Section Compétences */
+#competences {
+    background-color: #f9fbfd;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+#competences h3 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+#competences p {
+    font-size: 16px;
+    color: #566573;
+    margin-bottom: 40px;
+}
+
+/* Grille de compétences */
+.competence-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive */
+    gap: 20px;
+}
+
+/* Cartes de compétences */
+.competence-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    max-width: 240px;
+    margin: auto;
+}
+
+.competence-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.competence-card img {
+    max-width: 60px; /* Taille de l'image */
+    height: auto;
+    margin: 0 auto 10px;
+}
+
+.competence-card h4 {
+    font-size: 16px;
+    color: #3498db;
+    margin: 8px 0;
+}
+
+.competence-card p {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+
+.competence-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.competence-card a:hover h4 {
+    color: #2ecc71;
+}
+
+
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #444;
+    color: #fff;
+}
+
+/* Style de la section "Outils/Logiciels utilisés" */
+#tools {
+    background-color: #f9fbfd;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+#tools h3 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+#tools {
+    font-size: 16px;
+    color: #566573;
+    margin-bottom: 40px;
+}
+
+.tool-item {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    max-width: 250px;
+    background-color: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tool-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.tool-item h4 {
+    font-size: 1.2rem;
+    color: #0073e6;
+    margin-bottom: 10px;
+}
+
+.tool-item p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Section Documentation */
+#documentation {
+    background-color: #f9fbfd;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+#documentation h3 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+#documentation p {
+    font-size: 16px;
+    color: #566573;
+    margin-bottom: 40px;
+}
+
+/* Grille de documents */
+.documentation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive */
+    gap: 20px;
+}
+
+/* Cartes de documentation */
+.doc-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    max-width: 240px;
+    margin: auto;
+}
+
+.doc-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.doc-card img {
+    max-width: 60px; /* Taille de l'image */
+    height: auto;
+    margin: 0 auto 10px;
+}
+
+.doc-card h4 {
+    font-size: 16px;
+    color: #3498db;
+    margin: 8px 0;
+}
+
+.doc-card p {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+
+.doc-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.doc-card a:hover h4 {
+    color: #2ecc71;
+}
+
+/* Section Réalisations Professionnelles */
+#realisation-professionnels {
+    background-color: #f9fbfd;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+#realisation-professionnels h3 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+#realisation-professionnels p {
+    font-size: 16px;
+    color: #566573;
+    margin-bottom: 40px;
+}
+
+/* Grille de réalisations */
+.realisation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive */
+    gap: 20px;
+}
+
+/* Cartes de réalisations */
+.realisation-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    max-width: 240px;
+    margin: auto;
+}
+
+.realisation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.realisation-card img {
+    max-width: 60px; /* Taille de l'image */
+    height: auto;
+    margin: 0 auto 10px;
+}
+
+.realisation-card h4 {
+    font-size: 16px;
+    color: #3498db;
+    margin: 8px 0;
+}
+
+.realisation-card p {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+
+.realisation-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.realisation-card a:hover h4 {
+    color: #2ecc71;
+}
+
+/* Section BTS SIO */
+#bts-sio {
+    background-color: #f9fbfd;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+#bts-sio h3 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+#bts-sio p {
+    font-size: 16px;
+    color: #566573;
+    margin-bottom: 40px;
+}
+
+/* Section Veille Technologique */
+#veille-technologique {
+    background-color: #f9fbfd;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+#veille-technologique h3 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+#veille-technologique p {
+    font-size: 16px;
+    color: #566573;
+    margin-bottom: 40px;
+}
+
+/* Grille de veille */
+.veille-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive */
+    gap: 20px;
+}
+
+/* Cartes de veille */
+.veille-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    max-width: 240px;
+    margin: auto;
+}
+
+.veille-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.veille-card img {
+    max-width: 60px; /* Taille de l'image */
+    height: auto;
+    margin: 0 auto 10px;
+}
+
+.veille-card h4 {
+    font-size: 16px;
+    color: #3498db;
+    margin: 8px 0;
+}
+
+.veille-card p {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+
+.veille-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.veille-card a:hover h4 {
+    color: #2ecc71;
+}
+
